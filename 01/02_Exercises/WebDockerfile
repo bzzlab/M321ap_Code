@@ -1,0 +1,21 @@
+# fetch latest alpine image
+#??
+# label container with a description
+#??
+# update nginx and remove afterwards all files /var/cache/apk/*
+#??
+# create directory and subdirectory /tmp/nginx/
+#??
+# copy deploy/nginx.conf to /etc/nginx/nginx.conf
+#??
+# copy deploy/default.conf to /etc/nginx/conf.d/default.conf
+#??
+#??
+# copy all files in deploy/html/ to /usr/share/nginx/html/
+#??
+# expose tcp port 80
+#??
+# entrypoint is nginx
+#??
+# run nginx service in foreground
+#??
