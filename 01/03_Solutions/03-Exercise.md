@@ -8,9 +8,7 @@ example see [DockerFile Nginx](https://medium.com/@mrdevsecops/dockerfile-nginx-
 3. Program ```setup.sh``` that builds and runs a static website based on a
 container with nginx as web server. ```curl``` is used for testing the 
 website (submit an HTTP-GET request).
-4. Rename and push the image to your Docker-Hub account
-5. Remove the renamed image and pull your pushed image.
-6. Program ```teardown.sh``` in order to remove container and image.
-7. In case of errors: 
+4. Program ```teardown.sh``` in order to remove container and image. 
+5. In case of errors: 
    - Analyze the error message
    - Figure out the cause of the error and test an initial workaround (troubleshooting).
