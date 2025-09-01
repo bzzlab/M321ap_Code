@@ -7,7 +7,7 @@ Fill in the gaps to deploy the app ```google-samples/kubernetes-bootcamp:v1``` f
 the registry ```gcr.io``` on K8s.
 #### Your solution
 1. Create a cluster with minikube
-```
+```bash
 #??
 ```
 2. Deploy the mentioned app. Give it the name ```bzz-k8s-app-1```
