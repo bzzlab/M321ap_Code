@@ -19,10 +19,24 @@ e. Only deletes if you type y or Y.
 
 2. Test your script on your EC2 Instance running more than two deployments.
 TASK
+#---------------------------------------------------------------
+function install_package() {
+  local CMD=$1
+  echo "Checking ${CMD} installation ..."
+  if command -v ${CMD} &> /dev/null; then
+      VER=$(${CMD} --version)
+      echo "${CMD} version ${VER} is installed!"
+  else
+      echo "${CMD} installation not found. Installing now ..."
+      sudo apt  install ${CMD}
+  fi
+}
+#---------------------------------------------------------------
+# install package
+install_package "fzf"
 
 # set the namespace to work with (change if needed)
 NAMESPACE=default
-
 echo "Checking deployments in namespace: $NAMESPACE"
 
 # Get all deployment names and

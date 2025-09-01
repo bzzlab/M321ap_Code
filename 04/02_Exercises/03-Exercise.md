@@ -1,4 +1,4 @@
-### Exercise 3: Das
+### Exercise 3: Launch Minikube dashboard
 ####  Pre requisit
 1. You've successfully finished your previous exercise.
 #### Tasks
