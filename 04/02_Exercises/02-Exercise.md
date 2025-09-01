@@ -61,11 +61,3 @@ and examine the code server.js
 #??
 #??
 ```
-
-9. Now remove all deployments
-```bash
-#??
-#??
-#??
-#??
-```

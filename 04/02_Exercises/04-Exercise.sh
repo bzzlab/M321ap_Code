@@ -1,6 +1,6 @@
 #!/bin/bash
 :<<'TASK'
-Deleting deployments on minikube with a script
+Exercise 4: Deleting deployments on minikube with a script
 
 Prerequisite:
 You need to install package 'fzf' (super handy tool for interactive menus
