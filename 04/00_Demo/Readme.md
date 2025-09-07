@@ -1,1 +1,0 @@
-See LU03b - Basic Commands with Kubernetes (K8s) in Moodle
