@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+# for the deployment
+kind: Deployment #??
+metadata:
+  # name is sh-app1
+  name: sh-app1 #??
+spec:
+  # 1 replica
+  replicas: 1 #??
+  selector:
+    # label should match app=sh-app1
+    matchLabels: #??
+      app: sh-app1 #??
+  template:
+    metadata:
+      # labe is app=sh-app1
+      labels: #??
+        app: sh-app1 #??
+    spec:
+      # termination grace period 60 is seconds
+      terminationGracePeriodSeconds: 60 #??
+      # container is named app-container
+      # pulled from your registry and
+      # with port according to your app.
+      containers: #??
+        - name: app-container #??
+          image: readydocker1/selfhealing:latest #??
+          ports: #??
+            - containerPort: 4000 #??
+          readinessProbe:
+            # by http-get on endpoint /healthz
+            # and corresponding port
+            httpGet: #??
+              path: /healthz #??
+              port: 4000 #??
+            initialDelaySeconds: 2
+            periodSeconds: 2
+            failureThreshold: 3
+          livenessProbe:
+            # by http-get on endpoint /healthz
+            # and corresponding port
+            httpGet: #??
+              path: /healthz #??
+              port: 4000 #??
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            failureThreshold: 3
+          lifecycle:
+            preStop:
+              exec:
+                # call internal shutdown endpoint so app can signal readiness->false and begin shutdown
+                command: ["/bin/sh", "-c", "curl -sS http://127.0.0.1:4000/shutdown || true; sleep 1"] #??
+---
+apiVersion: v1
+# for the service
+kind: Service #??
+metadata:
+  # name is sh-app1
+  name: sh-app1-svc #??
+spec:
+  selector:
+    # label should match app=sh-app1
+    app: sh-app1 #??
+  # ports -> port and target port
+  # according to your app.
+  ports: #??
+    - port: 4000 #??
+      targetPort: 4000 #??
+  # type of service is cluster ip
+  type: ClusterIP #??
