@@ -1,7 +1,10 @@
-## How to deploy agnhost container?
+## How to deploy container?
+
+### Precondition
+1. Minikube is started
 
 ### 1. Example
-Let's take a special container with built-in subcommands:
+Let's take a special container (i.e. agnhost) with built-in subcommands:
 ```
 kubectl create deployment hello-node --image:registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080
 ```
