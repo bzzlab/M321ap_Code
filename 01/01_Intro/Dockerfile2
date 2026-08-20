@@ -1,0 +1,18 @@
+# Argument festlegen
+ARG OS_VERSION=20.04
+# Betriebssystem holen
+FROM ubuntu:${OS_VERSION}
+# Run update, install curl and remove all installation files
+RUN apt-get update && apt-get install -y curl \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create a home-directory hmuster
+RUN mkdir /home/hmuster
+# Setup environmental variables
+ENV USER hmuster
+ENV SHELL /bin/bash
+ENV LOGNAME hmuster
+
+CMD ["bash"]
+
