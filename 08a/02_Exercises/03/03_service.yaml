@@ -1,0 +1,24 @@
+#TASK: Create a Service declaration for K8s
+#
+#1. Create a Service named 'msg-service' as a load balancer.
+#Use for TCP as a protocol and 8080 for port the Service exposes internally and
+#the on Pod the Service forwards to.
+#For the selector use 'msg-replica'.
+#2. Apply and test the declared K8s resource on your AWS EC2 instance.
+#
+#Possible: NodePort or LoadBalancer
+#w/ minikube service <service-name> --url
+#or minikube tunnel
+#
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??

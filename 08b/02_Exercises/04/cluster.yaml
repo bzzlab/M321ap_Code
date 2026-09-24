@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+# for the deployment
+#??
+metadata:
+  # name is app4
+#??
+spec:
+  # 1 replica
+#??
+  selector:
+    # label should match app=app4
+#??
+#??
+  template:
+    metadata:
+      # labe is app=app4
+#??
+#??
+    spec:
+      # termination grace period 60 is seconds
+#??
+      # container is named app-container
+      # pulled from your registry and
+      # with port according to your app.
+#??
+#??
+#??
+#??
+#??
+---
+apiVersion: v1
+# for the service
+#??
+metadata:
+  # name is app4
+#??
+spec:
+  selector:
+    # label should match app=app4
+#??
+  # ports -> port and target port
+  # according to your app.
+#??
+#??
+#??
+  # type of service is cluster ip
+#??

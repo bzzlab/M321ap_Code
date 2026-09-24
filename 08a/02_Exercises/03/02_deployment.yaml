@@ -1,0 +1,30 @@
+#TASK: Create a Deployment declaration for K8s
+#
+#1. Create a Deployment named 'msg-deployment' with three replicas labled 'msg-replica'.
+#Use 'kubernetes-bootcamp:v1' (from the registry gcr.io/google-samples)
+#as container (named 'msg-container') and with the environment variable 'WELCOME' with a value
+#of your choice.
+#2. Apply and test the declared K8s resource on your AWS EC2 instance.
+#
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??

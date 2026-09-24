@@ -1,0 +1,21 @@
+#TASK: Create a Pod declaration for K8s
+#
+#Create a Pod named 'web-pod' in the default Namespace
+#with the nginx container named 'webcontainer' listen on Port 80
+#with the environment variable 'WELCOME' with a value
+#of your choice.
+#
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
+#??
